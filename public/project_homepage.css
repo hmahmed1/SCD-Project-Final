@@ -858,3 +858,51 @@ font-weight: bold;
 .danger:hover {
   background-color: #e60000;
 }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;         /* logo and text ka beech ka distance */
+}
+
+.logo-img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%; /* circle */
+}
+
+.logo-text {
+    margin: 0;
+    padding: 0;
+    color: white;          /* background ke hisab se change kar lena */
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.logo-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    position: relative !important;
+}
+
+.logo-text {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #f1c40f !important; /* aapka yellow */
+    position: static !important; /* sab unwanted position overwrite */
+    transform: none !important;
+    float: none !important;
+}
+.logo-img {
+    width: 60px; /* Adjust size as needed */
+    height: 60px;
+    border-radius: 50%; /* Make it round */
+    object-fit: cover; /* Ensure the image fits properly */
+    border: 2px solid #ffb03b; /* Add a border for better visibility */
+    animation: spin 5s linear infinite; /* Spinning animation */
+}
+
