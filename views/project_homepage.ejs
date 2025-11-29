@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
 
 </head>
 <style>
@@ -64,6 +65,17 @@
 }
 
 </style>
+
+
+<!-- Loading Animation Overlay -->
+<div id="loading" class="loading-overlay">
+    <div class="pizza-animation">
+        <img src="/images/Download pizza icon image for free-fotor-bg-remover-20241221123748.png" alt="Processing Pizza">
+        <p>Processing ...</p>
+    </div>
+</div>
+
+
 <body>
     <header class="header">
   <div class="logo-container">
@@ -90,9 +102,10 @@
                             <a class="nav-link active" href="/">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/menu" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Menu
-                            </a>
+                          <a class="nav-link dropdown-toggle" href="/menu" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="showLoading(event)">
+    Menu
+</a>
+
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="/menu#burgers">Burgers</a></li>
                                 <li><a class="dropdown-item" href="/menu#pizzas">Pizzas</a></li>
@@ -107,13 +120,14 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/about">About Us</a>
+                            <a class="nav-link" href="/about" onclick="showLoading(event)">About Us</a>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/gallery">Gallery</a>
+                            <a class="nav-link" href="/gallery" onclick="showLoading(event)">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/review">Reviews</a>
+                            <a class="nav-link" href="/review" onclick="showLoading(event)">Reviews</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/login"><i class="fas fa-user"></i></a>
@@ -206,9 +220,9 @@
     <!-- Mid Section -->
     <section class="mid-section text-center">
         <div class="container">
-            <h2 class="section-title">Experience the Taste of Tradition</h2>
-            <p class="section-description">At Forklore, we bring you the finest and most exquisite cuisines from around the world. Our chefs are passionate about food and create dishes that are not only flavorful but also healthy.</p>
-            <a href="/menu" class="btn btn-primary">Explore Our Menu</a>
+          
+            <a href="/menu" class="btn btn-primary" onclick="showLoading(event)">Explore Our Menu</a>
+
         </div>
     </section>
 
@@ -353,6 +367,9 @@
             </div>
         </div>
     </div>
+    <footer class="footer">
+    <p>© 2025 ShopEasy. All Rights Reserved.</p>
+</footer>
 </footer>
 
 <script src="login.js"></script>
@@ -360,9 +377,19 @@
 <script src="checkout.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="//code.tidio.co/rqhfqwjm3hboc1c3waf6ggpazd43dsyy.js" async></script>
+ <script src="//code.tidio.co/t2i95zjlf6x8kvf0gsbbst577yhxee33.js" async></script>
 
+<script>
+    function showLoading(event) {
+    event.preventDefault(); // Prevent immediate navigation
+    const loadingOverlay = document.getElementById("loading");
+    loadingOverlay.style.display = "flex"; // Show overlay
+    setTimeout(function() {
+        window.location.href = event.target.href; // Navigate after delay
+    }, 2000); // 2 seconds delay
+}
 
+</script>
 </body>
 </html>
 

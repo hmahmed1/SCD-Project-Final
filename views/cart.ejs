@@ -158,11 +158,25 @@
             </div>
         </div>
     </div>
+    <footer class="footer">
+    <p>© 2025 ShopEasy. All Rights Reserved.</p>
+</footer>
 </footer>
     
     <script src="login.js"></script>
     <script src="cart.js"></script>
     <script src="checkout.js"></script>
-    <script src="//code.tidio.co/rqhfqwjm3hboc1c3waf6ggpazd43dsyy.js" async></script>
+    <script src="//code.tidio.co/t2i95zjlf6x8kvf0gsbbst577yhxee33.js" async></script>
+    <script>
+    function showLoading(event) {
+    event.preventDefault(); // Prevent immediate navigation
+    const loadingOverlay = document.getElementById("loading");
+    loadingOverlay.style.display = "flex"; // Show overlay
+    setTimeout(function() {
+        window.location.href = event.target.href; // Navigate after delay
+    }, 2000); // 2 seconds delay
+}
+</script>
+
     </body>
     </html>

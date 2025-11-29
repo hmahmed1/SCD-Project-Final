@@ -135,8 +135,10 @@ document
         return;
       }
 
-      alert("Sign up successful! Redirecting to homepage...");
-      window.location.href = "/";
+      alert("Sign up successful! Redirecting to login form...");
+document.getElementById("signup-form").classList.remove("active"); // hide signup
+document.getElementById("login-form").classList.add("active"); // show login
+
     } catch (err) {
       console.error("Error signing up:", err);
       alert("An error occurred. Please try again later.");

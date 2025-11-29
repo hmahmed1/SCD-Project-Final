@@ -108,7 +108,10 @@
         <form id="signup-form" class="form">
             <h2>Sign Up</h2>
             <label for="username">User Name</label>
-            <input type="text" id="username" placeholder="User Name" required >
+<input type="text" id="username" placeholder="User Name" required 
+       pattern="(?=.*\d)[A-Za-z\d]{3,}" 
+       title="Username must include letters and at least one number">
+
             <label for="signup-email">Email</label>
             <input type="email" id="signup-email" placeholder="example123@email.com" required >
             <label for="signup-phone">Phone Number</label>
@@ -119,7 +122,16 @@
             <input type="password" id="confirm-password" required >
             <button type="submit">Sign Up</button>
         </form>
+<script>
+    const username = document.getElementById("username").value;
+const usernamePattern = /^(?=.*\d)[A-Za-z\d]{3,}$/;
 
+if (!usernamePattern.test(username)) {
+    alert("Username must include letters and at least one number!");
+    return false; // prevent form submit
+}
+
+</script>
         <form id="forgot-password-form" class="form">
             <h2>Reset Password</h2>
             <label for="reset-email">Email</label>
@@ -184,6 +196,9 @@
             </div>
         </div>
         </div>
+        <footer class="footer">
+    <p>© 2025 ShopEasy. All Rights Reserved.</p>
+</footer>
     </footer>
 
     <script src="login.js"></script>
