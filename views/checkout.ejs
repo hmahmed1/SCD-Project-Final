@@ -238,9 +238,19 @@ function validateAndPlaceOrder(event) {
 
     // After 2 seconds, hide loading and show success alert
     setTimeout(function() {
-        loadingOverlay.style.display = "none";
-        alert("Your order has been successfully delivered!");
-    }, 2000);
+    loadingOverlay.style.display = "none";
+    // 🧹 CLEAR CART AFTER SUCCESSFUL ORDER
+    localStorage.removeItem("cartData");
+    // 🔄 Update cart count immediately (if visible)
+    const cartCount = document.getElementById("cart-count");
+    if (cartCount) {
+        cartCount.textContent = "0";
+    }
+    alert("Your order has been successfully delivered!");
+    // Optional: redirect to home or menu
+    window.location.href = "/menu";
+}, 2000);
+
 }
 </script>
 

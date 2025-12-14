@@ -153,15 +153,24 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Redirect to login page if not logged in
     function handleCheckout() {
-      if (!isUserLoggedIn()) {
-        // Save intended redirect path to localStorage
-        localStorage.setItem("redirectPath", "/checkout");
-        alert("Please log in before proceeding to checkout.");
-        window.location.href = "/login"; // Redirect to the login page
-      } else {
-        window.location.href = "/checkout"; // Redirect to the checkout page if logged in
-      }
-    }
+
+  // 🛑 FIRST: check if cart is empty
+  if (cartData.length === 0) {
+    alert("Your cart is empty. Please add items first.");
+    window.location.href = "/menu";
+    return;
+  }
+
+  // 🔐 SECOND: check login
+  if (!isUserLoggedIn()) {
+    localStorage.setItem("redirectPath", "/checkout");
+    alert("Please log in before proceeding to checkout.");
+    window.location.href = "/login";
+  } else {
+    window.location.href = "/checkout";
+  }
+}
+
   
     // Attach checkout event listeners
     if (checkoutBtn) {
