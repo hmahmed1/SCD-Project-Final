@@ -958,3 +958,7 @@ header.header {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
+#password-feedback {
+    color: #ffcc00 !important;
+}

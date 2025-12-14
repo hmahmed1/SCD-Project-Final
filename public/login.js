@@ -29,6 +29,40 @@ function validatePassword(password) {
     /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   return passwordPattern.test(password);
 }
+// Real-time password strength feedback
+const passwordInput = document.getElementById("signup-password");
+const feedback = document.getElementById("password-feedback");
+
+if (passwordInput) {
+  passwordInput.addEventListener("input", function () {
+    const password = passwordInput.value;
+    const strength = getPasswordStrength(password);
+    feedback.textContent = strength.message;
+    feedback.style.color = strength.color;
+  });
+}
+
+// Function to evaluate password strength
+function getPasswordStrength(password) {
+  const hasUpper = /[A-Z]/.test(password);
+  const hasLower = /[a-z]/.test(password);
+  const hasNumber = /\d/.test(password);
+  const hasSpecial = /[@$!%*?&]/.test(password);
+
+  if (password.length === 0) return { message: "", color: "gray" };
+
+  let score = 0;
+  if (password.length >= 8) score++;
+  if (hasUpper) score++;
+  if (hasLower) score++;
+  if (hasNumber) score++;
+  if (hasSpecial) score++;
+
+  if (score <= 2) return { message: "Weak password", color: "yellow" };
+  if (score <= 4) return { message: "Moderate password", color: "yellow" };
+  return { message: "Strong password", color: "yellow" };
+}
+
 
 // Validate phone number format
 function validatePhone(phone) {
