@@ -37,15 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
     "Fried Rice": { price: 8.99, image: "Menu_images/rice1.jpg" },
     "Chicken Biryani": { price: 10.99, image: "Menu_images/rice2.jpg" },
     "Vegetable Pulao": { price: 7.99, image: "Menu_images/rice3.jpg" },
-    "Chocolate Cake": { price: 5.99, image: "Menu_images/dessert1.jpg" },
-    "Ice Cream Sundae": { price: 4.99, image: "Menu_images/dessert2.jpg" },
-    "Cheesecake": { price: 6.99, image: "Menu_images/dessert3.jpg" },
+    "Chocolate Cake": { price: 5.99, image: "Menu_images/choc_cake.jpg" },
+    "Ice Cream Sundae": { price: 4.99, image: "Menu_images/ice2.jpg" },
+    "Cheesecake": { price: 6.99, image: "Menu_images/cheesecake2.jpg" },
     "Coffee": { price: 2.99, image: "Menu_images/coffee.jpg" },
-    "Fresh Juice": { price: 3.99, image: "Menu_images/Drink3.jpg" },
+    "Fresh Juice": { price: 3.99, image: "Menu_images/orange_juice.jpg" },
     "Soda": { price: 1.99, image: "Menu_images/soda.jpg" },
     "BBQ Ribs": { price: 15.99, image: "Menu_images/bbqribs.jpg" },
     "BBQ Chicken": { price: 12.99, image: "Menu_images/bbq chicken.jpg" },
-    "Grilled Veggies": { price: 10.99, image: "Menu_images/grillveggies.jpg" },
+    "Grilled Veggies": { price: 10.99, image: "Menu_images/grilled_veg.jpg" },
   };
 
   // Update cart count display
