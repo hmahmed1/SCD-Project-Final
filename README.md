@@ -89,7 +89,7 @@ The project progressed in two phases: **Midterm Version (V1)** and **Final Versi
 ## 🎯 Why This Project is Important
 
 * ✅ Demonstrates **database integration** with MongoDB
-* ✅ Showcases **dynamic web development** using EJS, JavaScript, CSS
+* ✅ Showcases **dynamic web development** using EJS, JavaScript, CSS kainat do this work
 * ✅ Illustrates **scalable project structure**
 * ✅ Shows real-world **progression from prototype → full web app**
 
