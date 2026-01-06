@@ -57,6 +57,8 @@ The project progressed in two phases: **Midterm Version (V1)** and **Final Versi
 ## 🌟 Features of the Final Version
 
 * 🥗 **Dynamic Food Management:** Users can create, view, and manage items
+  
+* done by kainat
 * 🔐 **Secure User Accounts:** Login & signup with database storage
 * 📱 **Responsive Design:** Modern interface with CSS
 * ⚡ **Scalable Architecture:** Easy to add new features via EJS templates
